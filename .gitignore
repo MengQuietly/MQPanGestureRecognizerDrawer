@@ -19,6 +19,7 @@ xcuserdata/
 
 ## Other
 *.moved-aside
+<<<<<<< HEAD
 
 # 忽略DSStore文件
 .DS_Store
@@ -35,6 +36,9 @@ xcshareddata/
 # 忽略`Pods/`和`Podfile.lock`
 Pods/
 Podfile.lock
+=======
+*.xcuserstate
+>>>>>>> efe3c48c72cf56630d6202af6a9e36c6dcfcb066
 
 ## Obj-C/Swift specific
 *.hmap
