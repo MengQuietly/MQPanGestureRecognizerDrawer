@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     let leftView = UIView()
     let rightView = UIView()
     let mainView = UIView()
+    let screenW = UIScreen.mainScreen().bounds.size.width
+    let mainViewWithRight:CGFloat = 275 // 左移 > screenW * 0.5 时，mainView x 定位
+    let mainViewWithLeft:CGFloat = -250 // 右移 < screenW * 0.5时，mainView x 定位
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +65,28 @@ class ViewController: UIViewController {
         // 复位
         pan.setTranslation(CGPoint.zero, inView: view)
         
+        // 实现右移／左移到一定程度时，滚到相应位置，否则还原
+        // 判断当手势结束时定位
+        if pan.state == UIGestureRecognizerState.Ended {
+            // 定位
+            var target:CGFloat = 0
+            
+            if mainView.frame.origin.x > screenW * 0.5 {
+                // 1.判断mainView.x > screenW * 0.5,定位到右边 x= 275
+                target = mainViewWithRight
+            } else if CGRectGetMaxX(mainView.frame) < screenW * 0.5 {
+                // 2.判断mainView.x < screenW * 0.5,定位到右边 x= 275
+                target = mainViewWithLeft
+            }
+            
+            // 获取 X 轴偏移量
+            let offsetX = target - mainView.frame.origin.x
+            // 3.其它还原: target == 0,还原
+            UIView.animateWithDuration(0.25, animations: { 
+                self.mainView.frame = (target == 0) ? self.view.bounds:self.frameWithOffsetX(offsetX)
+            })
+        }
+        
     }
     
     /// 根据偏移 x 重新设置 mainView.frame
@@ -75,8 +100,9 @@ class ViewController: UIViewController {
         let maxY:CGFloat = 80.0
         let screenH = UIScreen.mainScreen().bounds.size.height
         
+        
         // X 轴每平移一点，Y轴也需要移动
-        let offsetY = offsetx * maxY / screenH
+        let offsetY = offsetx * maxY / screenW
         
         // 获取上一次的高度
         let preH = mainF.size.height
