@@ -391,6 +391,7 @@
 				09F7C3DA1D40E31C001AB339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09F7C3DB1D40E31C001AB339 /* Build configuration list for PBXNativeTarget "MQPanGestureRecognizerDrawerTests" */ = {
 			isa = XCConfigurationList;
@@ -399,6 +400,7 @@
 				09F7C3DD1D40E31C001AB339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
