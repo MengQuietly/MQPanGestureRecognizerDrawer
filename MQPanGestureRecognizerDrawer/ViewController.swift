@@ -29,12 +29,28 @@ class ViewController: UIViewController {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(panClick))
         view.addGestureRecognizer(pan)
         
+        // 添加点按手势
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapClick))
+        view.addGestureRecognizer(tap)
+        
+        
+        
 //        /// 使用 KVO 实时监听 mainView 的 frame 属性（比较耗性能）
 //        ///
 //        /// - parameter forKeyPath: 观察者（谁想监听）
 //        /// - parameter options:    监听的属性
 //        /// - parameter context:    监听新值的改变
 //        mainView.addObserver(self, forKeyPath: "frame", options: NSKeyValueObservingOptions.New, context: nil)
+    }
+    
+    /// MARK: - 点按手势处理
+    func tapClick() {
+        // 还原
+        if mainView.frame.origin.x != 0 {
+            UIView.animateWithDuration(0.25, animations: {
+                self.mainView.frame = self.view.bounds
+            })
+        }
     }
     
     /// 只要监听到属性一改变，就会调用观察者的此方法，通知有新值
