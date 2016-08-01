@@ -13,9 +13,11 @@ import UIKit
  */
 class ViewController: UIViewController {
     
+    /// 设计原理：若需把控件暴露出去，一定要写成 readOnly
     let leftView = UIView()
     let rightView = UIView()
     let mainView = UIView()
+    
     let screenW = UIScreen.mainScreen().bounds.size.width
     let mainViewWithRight:CGFloat = 275 // 左移 > screenW * 0.5 时，mainView x 定位
     let mainViewWithLeft:CGFloat = -250 // 右移 < screenW * 0.5时，mainView x 定位

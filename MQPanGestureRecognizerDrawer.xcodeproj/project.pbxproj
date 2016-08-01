@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09082A551D4EF9F7006B79C2 /* MQDemoMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09082A541D4EF9F7006B79C2 /* MQDemoMainController.swift */; };
+		09082A571D4EFA93006B79C2 /* MQDemoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09082A561D4EFA93006B79C2 /* MQDemoTableController.swift */; };
 		09F7C3BF1D40E31C001AB339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F7C3BE1D40E31C001AB339 /* AppDelegate.swift */; };
 		09F7C3C11D40E31C001AB339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F7C3C01D40E31C001AB339 /* ViewController.swift */; };
 		09F7C3C41D40E31C001AB339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F7C3C21D40E31C001AB339 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09082A541D4EF9F7006B79C2 /* MQDemoMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQDemoMainController.swift; sourceTree = "<group>"; };
+		09082A561D4EFA93006B79C2 /* MQDemoTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQDemoTableController.swift; sourceTree = "<group>"; };
 		09F7C3BB1D40E31C001AB339 /* MQPanGestureRecognizerDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQPanGestureRecognizerDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F7C3BE1D40E31C001AB339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F7C3C01D40E31C001AB339 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 			children = (
 				09F7C3BE1D40E31C001AB339 /* AppDelegate.swift */,
 				09F7C3C01D40E31C001AB339 /* ViewController.swift */,
+				09082A541D4EF9F7006B79C2 /* MQDemoMainController.swift */,
+				09082A561D4EFA93006B79C2 /* MQDemoTableController.swift */,
 				09F7C3C21D40E31C001AB339 /* Main.storyboard */,
 				09F7C3C51D40E31C001AB339 /* Assets.xcassets */,
 				09F7C3C71D40E31C001AB339 /* LaunchScreen.storyboard */,
@@ -199,7 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F7C3C11D40E31C001AB339 /* ViewController.swift in Sources */,
+				09082A571D4EFA93006B79C2 /* MQDemoTableController.swift in Sources */,
 				09F7C3BF1D40E31C001AB339 /* AppDelegate.swift in Sources */,
+				09082A551D4EF9F7006B79C2 /* MQDemoMainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
